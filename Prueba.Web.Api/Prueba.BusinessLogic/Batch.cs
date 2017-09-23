@@ -12,16 +12,20 @@ namespace Prueba.BusinessLogic
         public string Description { get; set; }
         public string Name { get; set; }
         private string Status;
-        public void setStatus(string aStatus)
+        public void SetStatus(string aStatus)
         {
-            if (availableStatus.Contains(aStatus))
+            if (IsStatusValid(aStatus))
             {
                 this.Status = aStatus;
             }
         }
-        public string getStatus()
+        public string GetStatus()
         {
             return this.Status;
+        }
+        private bool IsStatusValid(string aStatus)
+        {
+            return availableStatus.Contains(aStatus);
         }
     }
 }
