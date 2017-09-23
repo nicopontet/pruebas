@@ -52,5 +52,30 @@ namespace Prueba.BusinessLogic.Test
             Assert.AreNotEqual(testStatus, batch.getStatus());
         }
 
+        [TestMethod]
+        public void TestCreateBatchCorrectStatus()
+        {
+            string testStatusOpen = "Open";
+            string testStatusInspecting = "Inspecting";
+            string testStatusReadyToGo = "ReadyToGo";
+            string testStatusInTransit = "InTransit";
+            string testStatusDelivered = "Delivered";
+            Batch batchOpen = new Batch();
+            batchOpen.setStatus(testStatusOpen);
+            Batch batchReadyToGo = new Batch();
+            batchReadyToGo.setStatus(testStatusReadyToGo);
+            Batch batchInspecting = new Batch();
+            batchInspecting.setStatus(testStatusInspecting);
+            Batch batchInTransit = new Batch();
+            batchInTransit.setStatus(testStatusInTransit);
+            Batch batchDelivered = new Batch();
+            batchDelivered.setStatus(testStatusDelivered);
+            Assert.AreEqual(testStatusOpen, batchOpen.getStatus());
+            Assert.AreEqual(testStatusInspecting, batchInspecting.getStatus());
+            Assert.AreEqual(testStatusReadyToGo, batchReadyToGo.getStatus());
+            Assert.AreEqual(testStatusInTransit, batchInTransit.getStatus());
+            Assert.AreEqual(testStatusDelivered, batchDelivered.getStatus());
+        }
+
     }
 }
