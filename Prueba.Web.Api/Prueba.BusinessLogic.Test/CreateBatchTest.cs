@@ -7,8 +7,9 @@ namespace Prueba.BusinessLogic.Test
     public class CreateBatchTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestCreateBatch()
         {
+            Batch batch = new Batch();
         }
     }
 }
