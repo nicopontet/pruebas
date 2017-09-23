@@ -27,5 +27,15 @@ namespace Prueba.BusinessLogic
         {
             return availableStatus.Contains(aStatus);
         }
+        private Operator portOperator;
+        public void SetOperator(Operator portOperator)
+        {
+            this.portOperator = portOperator;
+        }
+
+        public Operator GetOperator()
+        {
+            return this.portOperator;
+        }
     }
 }
