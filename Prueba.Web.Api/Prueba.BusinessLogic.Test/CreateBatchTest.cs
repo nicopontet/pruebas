@@ -40,8 +40,16 @@ namespace Prueba.BusinessLogic.Test
         public void TestCreateBatchWithStatus()
         {
             string testStatus = "Open";
-            batch.Status = testStatus;
-            Assert.AreEqual(testStatus, batch.Status);
+            batch.setStatus(testStatus);
+            Assert.AreEqual(testStatus, batch.getStatus());
+        }
+
+        [TestMethod]
+        public void TestCreateBatchWithWrongStatus()
+        {
+            string testStatus = "Closed";
+            batch.setStatus(testStatus);
+            Assert.AreNotEqual(testStatus, batch.getStatus());
         }
 
     }
