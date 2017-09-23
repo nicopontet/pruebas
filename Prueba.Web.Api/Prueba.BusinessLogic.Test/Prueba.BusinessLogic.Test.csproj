@@ -55,6 +55,12 @@
     <Compile Include="CreateBatchTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Prueba.BusinessLogic\Prueba.BusinessLogic.csproj">
+      <Project>{74A1DEFF-0A7D-4AF0-9D8D-00B114F21C2A}</Project>
+      <Name>Prueba.BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
