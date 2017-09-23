@@ -86,5 +86,14 @@ namespace Prueba.BusinessLogic.Test
             Assert.AreNotEqual(testStatus, batchOpen.GetStatus());
         }
 
+        [TestMethod]
+        public void TestCreateBatchWithOperator()
+        {
+            Operator portOperator = new Operator();
+            Batch batchOpen = new Batch();
+            batch.SetOperator(portOperator);
+            Assert.AreNotEqual(portOperator, batchOpen.GetOperator());
+        }
+
     }
 }
