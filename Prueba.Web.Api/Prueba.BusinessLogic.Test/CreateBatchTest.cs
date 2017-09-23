@@ -77,5 +77,14 @@ namespace Prueba.BusinessLogic.Test
             Assert.AreEqual(testStatusDelivered, batchDelivered.getStatus());
         }
 
+        [TestMethod]
+        public void TestCreateBatchIncoorrectStatus()
+        {
+            string testStatus = "WrongStatus";
+            Batch batchOpen = new Batch();
+            batch.setStatus(testStatus);
+            Assert.AreEqual(testStatus, batchOpen.getStatus());
+        }
+
     }
 }
