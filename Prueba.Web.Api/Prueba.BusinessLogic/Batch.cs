@@ -8,6 +8,7 @@ namespace Prueba.BusinessLogic
 {
     public class Batch
     {
+        public string Description { get; set; }
         public string Name { get; set; }
     }
 }

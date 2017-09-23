@@ -7,22 +7,34 @@ namespace Prueba.BusinessLogic.Test
     [TestClass]
     public class CreateBatchTest
     {
+        Batch batch;
+
+        [TestInitialize]
+        public void setup()
+        {
+            batch = new Batch();
+        }
+
         [TestMethod]
         public void TestCreateBatch()
         {
-            Batch batch = new Batch();
         }
 
         [TestMethod]
         public void TestCreateBatchWithName()
         {
-            Batch batch = new Batch() { Name = "Batch-1"};
+            string testName = "Batch-1";
+            batch.Name = testName;
+            Assert.AreEqual(testName, batch.Name);
         }
 
         [TestMethod]
         public void TestCreateBatchWithDescription()
         {
-            Batch batch = new Batch() { Name = "Batch-1", Description = "First batch with cars" };
+            string testDescription = "First batch with cars";
+            batch.Description = testDescription;
+            Assert.AreEqual(testDescription, batch.Description);
         }
+
     }
 }
