@@ -36,5 +36,13 @@ namespace Prueba.BusinessLogic.Test
             Assert.AreEqual(testDescription, batch.Description);
         }
 
+        [TestMethod]
+        public void TestCreateBatchWithStatus()
+        {
+            string testStatus = "Open";
+            batch.Status = testStatus;
+            Assert.AreEqual(testStatus, batch.Status);
+        }
+
     }
 }
