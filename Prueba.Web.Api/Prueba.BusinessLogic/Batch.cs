@@ -8,12 +8,13 @@ namespace Prueba.BusinessLogic
 {
     public class Batch
     {
+        private List<string> availableStatus = new List<string>() { "Open", "Inspecting", "ReadyToGo", "InTransit", "Delivered" };
         public string Description { get; set; }
         public string Name { get; set; }
         private string Status;
         public void setStatus(string aStatus)
         {
-            if (aStatus != "Closed")
+            if (availableStatus.Contains(aStatus))
             {
                 this.Status = aStatus;
             }

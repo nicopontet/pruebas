@@ -83,7 +83,7 @@ namespace Prueba.BusinessLogic.Test
             string testStatus = "WrongStatus";
             Batch batchOpen = new Batch();
             batch.setStatus(testStatus);
-            Assert.AreEqual(testStatus, batchOpen.getStatus());
+            Assert.AreNotEqual(testStatus, batchOpen.getStatus());
         }
 
     }
