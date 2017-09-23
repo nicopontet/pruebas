@@ -18,5 +18,11 @@ namespace Prueba.BusinessLogic.Test
         {
             Batch batch = new Batch() { Name = "Batch-1"};
         }
+
+        [TestMethod]
+        public void TestCreateBatchWithDescription()
+        {
+            Batch batch = new Batch() { Name = "Batch-1", Description = "First batch with cars" };
+        }
     }
 }
